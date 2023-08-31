@@ -1,0 +1,88 @@
+<!DOCTYPE html>
+
+
+<head>
+
+<meta charset="UTF-8">
+<link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.1/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-4bw+/aepP/YC94hEpVNVgiZdgIC5+VKNBQNGCHeKRQN+PtmoHDEXuppvnDJzQIu9" crossorigin="anonymous">
+
+
+</head>
+
+
+<body>
+
+
+< class="Desktop3" style="width: 1920px; height: 1080px; position: relative; background: #6E260E">
+  <img class="Rectangle1" style="width: 1920px; height: 1080px; left: 0px; top: 0px; position: absolute; box-shadow: 4px 4px 4px; border: 0.50px black solid; filter: blur(4px)" src="https://s3-alpha-sig.figma.com/img/4c52/5e5e/1b82347cbe2eb9bef3389825c4e93565?Expires=1694390400&Signature=UOdO-4xD2jPjqUH4NkzHCi04qiT0yYVso-Dq4vN5fnC6WNZgQ4QrM-ZsaqwXi3VX4kteYRmC3Jx2L8QK0ydo3tZDnq-VOI~CmGBmjxJ~qp0LOreiS5J5AyPQYzGXl3Q9GcsrUJnLttvcGoWk-Diyyqvbofa90L0RqYri0ZwnuQimY3GQEP-Y~TBnJmbnKMT6eB2ZhnmELdtvcwemNnV3CnJwmaRnXFj79sNaWJ7jIXZG9tni1RBIWQ2L-ncuhs8WJHssa6Lsr4nMqdfoYJKmFWOZXhw1MjfIUm9oMlldOAOBLAsSL0Atk3QC-~Z9ih6--jV1i7cjt4VN5JKasI0sxw__&Key-Pair-Id=APKAQ4GOSFWCVNEHN3O4" />
+
+
+
+<div class="Rectangle2" style="width: 1920px; height: 152px; left: 0px; top: 0px; position: absolute; background: #BD9168">
+</div>
+
+
+<div style="width: 324px; height: 77px; left: 741px; top: 40px; position: absolute; color: black; font-size: 64px; font-family: Lobster; font-weight: 400; word-wrap: break-word">Каталог
+</div>
+
+
+<div style="width: 354px; height: 100px; left: 339px; top: -50px; position: absolute">
+
+<span style="color: black; font-size: 64px; font-family: Lobster; font-weight: 400; word-wrap: break-word"><br/> <a href="{% url 'pocetna' %}"> Почетна</a>
+</span>
+
+<span style="color: black; font-size: 64px; font-family: Inter; font-weight: 400; word-wrap: break-word">
+</span>
+</div>
+  <img class="Screenshot202305231238331" style="width: 174px; height: 154px; left: 0px; top: -12px; position: absolute" src="https://s3-alpha-sig.figma.com/img/53b5/e89f/be94a6064e5e8ec6a3a3b295aa810f7b?Expires=1694390400&Signature=CAHEkCH3PrtILAP1yfh1HKNIIukAtg4DIEBYS5kLDp~AiT-MyDMJMVUZEwH~akFLXALanwlg-d6sw7dxUsMlh2gDmN3YD29kDJxNE7~B5wYxb5fp-gvMj-ezZF~rVQyJgfCYdrRGRRh4XKqltMcanhJoMLiJZh3z~bAXWaLvNY5h0UOFw6mv34S~BEjxNHyRcuA2U3NqfsA7wdyKgOWGoMIOZEk6VmJ-d-X4nrMreowxYOJ934JAUlg9cBVPzQMvAFW5mJpr8GAzE37Y5V4eL6JndZfVy2tEiJUVyvmdnq8Sg0Nw1ep0aDBXFI-WuRLlva7JGivfscuV1TxZE-gc3w__&Key-Pair-Id=APKAQ4GOSFWCVNEHN3O4" />
+
+
+<div style="width: 354px; height: 100px; left: 1460px; top: 26px; position: absolute; color: black; font-size: 64px; font-family: Lobster; font-weight: 400; word-wrap: break-word"> <a href="{% url 'za_nas' %}">   За нас </a>
+</div>
+
+
+<div style="width: 354px; height: 100px; left: 1106px; top: 26px; position: absolute">
+
+<span style="color: black; font-size: 64px; font-family: Inter; font-weight: 400; word-wrap: break-word">
+</span>
+
+<span style="color: black; font-size: 64px; font-family: Lobster; font-weight: 400; word-wrap: break-word"><a href="{% url 'najava' %}">Најава</a>
+</span>
+</div>
+
+
+<div style="width: 354px; height: 100px; left: 1106px; top: 26px; position: absolute">
+
+<span style="color: black; font-size: 64px; font-family: Inter; font-weight: 400; word-wrap: break-word">
+</span>
+
+<span style="color: black; font-size: 64px; font-family: Lobster; font-weight: 400; word-wrap: break-word">Најава
+</span>
+</div>
+{% for prodavac in prodavac %}
+
+<div style="width: 324px; height: 77px; left: 740px; top: 223px; position: absolute; text-align: center; color: black; font-size: 64px; font-family: Lobster; font-weight: 400; word-wrap: break-word">{{ kupuvac.Ime }}
+</div>
+
+         {% for cigar in cigars %}
+     <div class="container mt-5">
+    <div class="row row-cols-1 row-cols-md-2 row-cols-lg-3 g-4">
+      <!-- Card 1 -->
+      <div class="col">
+        <div class="card">
+          <img src="{{ MEDIA_NAV }}{{ cigar.fotografija.url }}" class="card-img-top" alt="Image 1">
+          <div class="card-body">
+            <h5 class="card-title">{{ cigar.ime_na_proizvoditel }}</h5>
+
+          </div>
+        </div>
+      </div>
+
+
+      </div>
+         {% endfor %}
+         {% endfor %}
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.1/dist/js/bootstrap.bundle.min.js" integrity="sha384-HwwvtgBNo3bZJJLYd8oVXjrBZt8cqVSpeBNS5n7C8IVInixGAoxmnlMuBnhbgrkm" crossorigin="anonymous"></script>
+
+</body>
+</html>
