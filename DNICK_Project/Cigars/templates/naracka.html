@@ -73,16 +73,18 @@
 <div style="width: 324px; height: 77px; left: 741px; top: 40px; position: absolute; color: black; font-size: 64px; font-family: Lobster; font-weight: 400; word-wrap: break-word"><a href="{% url 'cigars' %}">Каталог </a>
 </div>
 
-<div class="container text-white text-center mt-5">
+<div class="container text-white text-center mt-5" style="padding-top: 9%;
+    position: relative;">
         <div>
-            <h1>{{cigar.ime_na_proizvoditel}}</h1>
-            <img src="{{MEDIA_URL}}{{naracka.fotgrafija.url}}" alt="..." height="45%" width="45%">
+            <h1>{{naracka.ime_na_proizvoditel}}</h1>
+            <img src="{{MEDIA_URL}}{{naracka.fotografija.url}}" alt="..." height="25%" width="25%">
             <p style="font-size: 25px">{{ naracka.deskripcija }}</p>
             <p style="font-size: 25px">Цена: {{ naracka.cena }}$</p>
-            <p style="font-size: 25px">Залиха: {{ naracka.zaliha }}$</p>
+            <p style="font-size: 25px">Залиха: {{ naracka.zaliha }}</p>
 
-                <div>
-                    <div class="col-lg-2">
+                <div style="    padding-top: 0%;
+    padding-left: -13%;" >
+                    <div class="col-lg-2" style="padding-top: 10%;">
                                         <div class="input-group">
                                     <span class="input-group-btn">
                                         <button type="button" class="quantity-left-minus btn btn-danger btn-number"  data-type="minus" data-field="">
@@ -97,7 +99,7 @@
                                     </span>
                                 </div>
                         </div>
-                    <a href="{% url 'uspesna_pokupka' naracka.shifra %}">
+                    <a href="{% url 'uspesna_pokupka' %}">
                         <button class="btn btn-dark">Нарачајте</button>
                     </a>
                 </div>

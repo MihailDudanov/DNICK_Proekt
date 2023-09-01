@@ -46,9 +46,11 @@ def kupuvac(request):
     return render(request,"kupuvac.html",context=context)
 
 def naracka(request, id=0):
-    naracka = Proizvod.get(id)
-    context = {"naracka": naracka()}
-    return render(request, "proizvod.html", context=context)
+    if id == 0:
+        return render(request,"cigars.html")
+    naracka = Proizvod.objects.get(pk=id)
+    context = {"naracka": naracka}
+    return render(request, "naracka.html", context=context)
 
 def najava(request):
     korisnik=Najava.objects.filter().all()
@@ -56,3 +58,5 @@ def najava(request):
     return render(request, "najava.html", context=context)
 
 
+def uspesna_pokupka(request):
+    return render(request, "uspesna_pokupka.html",)
